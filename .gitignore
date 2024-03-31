@@ -1,0 +1,16 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+**/node_modules/
+
+**/.next/
+
+.env.local
+.env.production
+.env.staging
+
+**/.env.local
+**/.env.production
+**/.env.staging
