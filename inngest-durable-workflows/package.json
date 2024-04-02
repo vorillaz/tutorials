@@ -1,0 +1,39 @@
+{
+  "name": "framework-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:migrate": "tsx drizzle/migrate.ts",
+    "db:seed": "tsx drizzle/seed.ts",
+    "dev": "tsx watch src .env",
+    "start": "node dist/index.js",
+    "studio": "drizzle-kit studio --config ./drizzle.config.ts --port 3001"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "^7.0.2",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^3.0.0",
+    "better-sqlite3": "^9.4.3",
+    "drizzle-orm": "^0.30.5",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "inngest": "^3.16.1",
+    "pino": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.9",
+    "@types/node": "^20.5.2",
+    "@types/pino": "7.0.5",
+    "drizzle-kit": "^0.20.14",
+    "fastify-print-routes": "^3.1.1",
+    "json-schema-to-ts": "3.0.1",
+    "pino-pretty": "11.0.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,38 @@
+*,*:after,*:before {
+    box-sizing: inherit
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+
+body {
+    color: #606c76;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6
+}
+
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 3rem auto;
+    padding: 1rem 4.0rem;
+    position: relative;
+    width: 100%;
+}
+
+ol {
+    list-style: decimal inside;
+    margin-top: 0;
+    padding-left: 0;
+    margin: 1.5rem 0 1.5rem 0;
+}
