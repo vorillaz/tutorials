@@ -16,3 +16,9 @@ node_modules/
 **/.env.staging
 
 **/sqlite.db
+**/sqlite.db-shm
+**/sqlite.db-wal
+**/sqlite.db-journal
+**/db.json
+**/docs
+**/trpc

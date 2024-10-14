@@ -1,0 +1,9 @@
+{
+  "name": "vorillaz-companion",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Companion code for articles and tutorials in vorillaz.com",
+  "scripts": {
+    "nuke": "pnpm dlx npkill"
+  }
+}

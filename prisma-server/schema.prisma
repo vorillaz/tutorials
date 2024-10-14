@@ -1,0 +1,36 @@
+datasource db {
+    provider = "sqlite"
+    url      = "file:./sqlite.db"
+}
+
+// Default Prisma Client
+generator client {
+    provider = "prisma-client-js"
+}
+
+// Prisma Docs Generator
+generator docs {
+    provider = "node node_modules/prisma-docs-generator"
+}
+
+// Prisma TRPC Generator
+
+generator trpc {
+    provider    = "prisma-trpc-generator"
+    output      = "./trpc"
+    contextPath = "./ctx"
+    withShield  = false
+}
+
+model User {
+    id    Int    @id @default(autoincrement())
+    email String @unique
+    posts Post[] // relation field (defined only at the Prisma ORM level)
+}
+
+model Post {
+    id       Int    @id @default(autoincrement())
+    title    String
+    author   User   @relation(fields: [authorId], references: [id]) // relation field (uses the relation scalar field `authorId` below)
+    authorId Int // relation scalar field (used in the `@relation` attribute above)
+}
